@@ -1,0 +1,11 @@
+*
+!Dockerfile
+!requirements.txt
+!requirements-api.txt
+!captcha.py
+!digit_ocr.py
+!ocr_api.py
+!ocr_worker.py
+!tessdata/
+tessdata/*
+!tessdata/eng.traineddata
