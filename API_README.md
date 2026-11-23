@@ -76,11 +76,13 @@ curl.exe -sS -H "X-API-Key: $env:OCR_API_KEY" -F "file=@docs/images/digits-0042.
 {
   "success": true,
   "text": "0042",
-  "processing_ms": 794
+  "processing_ms": 862
 }
 ```
 
 `processing_ms` измеряет время после приёма файла, включая запуск процесса OCR. Если распознаватель вернул четыре цифры с низкой уверенностью, API также передаст их в `text`. Отдельного поля уверенности в ответе нет.
+
+![Swagger UI показывает HTTP 200 и строку 0042 при загрузке демонстрационного PNG](docs/images/swagger-response.svg)
 
 | Параметр загрузки | Допустимое значение |
 | --- | --- |
