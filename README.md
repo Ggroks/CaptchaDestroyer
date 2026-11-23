@@ -14,6 +14,16 @@ Four-digit OCR for photos and scans. Read an image from the command line or uplo
 
 ## Быстрый старт
 
+### Пример для первого запуска
+
+В опубликованном SVG хранится исходный PNG. Чтобы использовать его в командах ниже, выполните из корня проекта:
+
+```shell
+python -c "from pathlib import Path; from base64 import b64decode; p=Path('docs/images/digits-0042.svg'); p.with_suffix('.png').write_bytes(b64decode(p.read_text().split('base64,')[1].split(chr(34))[0]))"
+```
+
+В Linux команда интерпретатора может называться `python3`, в Windows — `py`. Для своего фото просто укажите путь к нему.
+
 Понадобятся Python 3.14 и файл модели `eng.traineddata`. Выполняйте команды из корня репозитория. Установка проверена на Windows x64.
 
 1. Скачайте модель и положите её по пути `tessdata/eng.traineddata`. [Модель Tesseract](https://github.com/tesseract-ocr/tessdata_best/blob/4.1.0/eng.traineddata)
