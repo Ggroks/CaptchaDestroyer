@@ -14,13 +14,11 @@ Four-digit OCR for photos and scans. Read an image from the command line or uplo
 
 ## Пример с низкой уверенностью
 
-<img src="docs/images/image.svg" alt="Исходное изображение для второго примера распознавания" width="320">
+| Исходное изображение | Промежуточное изображение OCR | Вывод CLI |
+| :---: | :---: | :--- |
+| <img src="docs/images/image.svg" alt="Исходный файл image.png" width="210"> | <img src="docs/images/image-otsu.svg" alt="Чёрно-белый вариант image.png после пороговой обработки методом Оцу" width="210"> | `0731 (уверенность низкая, сомнение во второй цифре)` |
 
-При обработке `image.png` распознаватель сохранил ведущий ноль и отметил вторую цифру как сомнительную. Фактический вывод CLI:
-
-```text
-0731 (уверенность низкая, сомнение во второй цифре)
-```
+Средний кадр — файл `otsu.png`, сохранённый командой `python captcha.py image.png --debug-dir ocr-preview`.
 
 ## Быстрый старт
 
